@@ -1,0 +1,9 @@
+# append this to /etc/samba/smb.conf
+[send_storage]
+   comment = Send Storage
+   path = /mnt/data/send_storage/data # change the path according to your setup
+   browseable = yes
+   writeable = yes
+   guest ok = no
+   valid users = send # the unix user
+   create mask = 0640
