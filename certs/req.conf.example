@@ -1,0 +1,23 @@
+# Fill this out before using ./make-cert.sh
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = DE
+ST =
+L =
+O =
+CN =
+
+[v3_req]
+keyUsage = keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = host1
+DNS.2 = host2
+DNS.3 = host3
+#...

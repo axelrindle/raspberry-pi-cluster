@@ -1,0 +1,6 @@
+.passwords
+*.crt
+*.key
+*.csr
+*.srl
+req.conf
