@@ -1,0 +1,23 @@
+version: 0.1
+
+log:
+  accesslog:
+    disabled: true
+
+storage:
+  delete:
+    enabled: true
+  cache:
+    blobdescriptor: redis
+  filesystem:
+    rootdirectory: /var/lib/registry
+
+http:
+  addr: 0.0.0.0:5000
+  secret: <RANDOM STRING HERE>
+  tls:
+    certificate: /certs/cluster.crt
+    key: /certs/cluster.key
+
+redis:
+  addr: redis:6379
